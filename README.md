@@ -10,7 +10,7 @@ Debug Thugs
 * [Rushi Javiya ](https://github.com/Rushijaviya) 
 * [Tapan Savani](https://github.com/Stapan17)
 * [Mohit Panchasara](https://github.com/MohitPanchasara)
-* [Manthan Ghasadiya](#)
+* [Manthan Ghasadiya](https://github.com/manthanghasadiya)
 
 ## Problem Statement 
 * Simplifying medical procedures by organising and preserving each user's health data.
