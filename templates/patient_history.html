@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class=''>
+
+<head>
+    <meta charset='UTF-8'>
+    <title> Patient History </title>
+
+    <style>        
+        body {
+            font-family: "Nunito", sans-serif;
+            height: 100vh;
+            background: url('../static/image/DNA_Wall.jpg')  no-repeat;
+            background-color: #000000;
+            background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+            position: relative;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 15px;
+            margin-top: 50px;
+            border-radius: 3px;
+        }
+        
+        tr {
+            background-color: #f5f5f5;
+        }
+        
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+        }
+        
+        .clickable-row:hover {
+            background-color: #cdcdcd;
+        }
+        
+        .head {
+            color: white;
+            background: #2D2D26;
+        }
+        
+        form {
+            max-width: 300px;
+            margin: 10px auto;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background: #f4f7f8;
+            border-radius: 8px;
+        }
+        
+        h1 {
+            font-size: 35px;
+            margin: 0 0 20px 0;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="email"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="url"],
+        textarea,
+        select {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            font-size: 16px;
+            height: auto;
+            margin: 0;
+            outline: 0;
+            padding: 10px;
+            width: 100%;
+            background-color: #e8eeef;
+            color: #8a97a0;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+            margin-bottom: 5px;
+        }
+        
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 0 4px 8px 0;
+        }
+        
+        select {
+            padding: 6px;
+            height: 32px;
+            border-radius: 2px;
+        }
+        
+        button {
+            align: center;
+            padding: 10px 30px 10px 30px;
+            color: #fff;
+            background-color: #4bc970;
+            font-size: 18px;
+            text-align: center;
+            font-style: normal;
+            border-radius: 5px;
+            width: 50%;
+            border: 1px solid #3ac162;
+            border-width: 1px 1px 3px;
+            box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+            margin-bottom: 10px;
+            margin-left: 25%;
+            background: -webkit-linear-gradient(to right, #019e35 0%, #02e64d 100%);
+            background: -moz-linear-gradient(to right, #019e35 0%, #02e64d 100%);
+            background: linear-gradient(to right, #019e35 0%, #02e64d 100%);
+        }
+        
+        button:hover {
+            background: -webkit-linear-gradient(to right, #02e64d 0%, #019e35 100%);
+            background: -moz-linear-gradient(to right, #02e64d 0%, #019e35 100%);
+            background: linear-gradient(to right, #02e64d 0%, #019e35 100%);
+        }
+        
+        .btnSub {
+            padding: 10px 30px 10px 30px;
+            color: #fff;
+            background-color: #4bc970;
+            font-size: 18px;
+            text-align: center;
+            font-style: normal;
+            border-radius: 5px;
+            width: 50%;
+            border: 1px solid #FF060F;
+            border-width: 1px 1px 3px;
+            box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+            margin-bottom: 10px;
+           background: -webkit-linear-gradient(to right, #D20008 0%, #FF060F 100%);
+            background: -moz-linear-gradient(to right, #D20008 0%, #FF060F 100%);
+            background: linear-gradient(to right, #D20008 0%, #FF060F 100%);
+
+            
+        }
+        
+        .btnSub:hover {
+          background: -webkit-linear-gradient(to right, #FF060F 0%, #D20008 100%);
+            background: -moz-linear-gradient(to right, #FF060F 0%,  #D20008 100%);
+            background: linear-gradient(to right, #FF060F 0%, #D20008 100%);
+            color: white;
+        }
+        
+        .center {
+            align: center;
+            text-align: center;
+            margin: 40px;
+        }
+        
+        fieldset {
+            margin-bottom: 30px;
+            border: none;
+        }
+        
+        legend {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        label.light {
+            font-weight: 300;
+            display: inline;
+        }
+        
+        .bikes {
+            margin: 70px;
+            border-radius: 3px;
+        }
+        
+        .number {
+            background-color: #5fcf80;
+            color: #fff;
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            font-size: 0.8em;
+            margin-right: 4px;
+            line-height: 30px;
+            text-align: center;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+            border-radius: 100%;
+        }
+        
+        @media screen and (min-width: 480px) {
+            form {
+                max-width: 700px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="bikes" style="margin-top: 40px">
+        <h1 style="color: whitesmoke;">Patient History</h1>
+
+        {% comment %} {% for user in users %} {{user.doctor}} {{user.date}}{{user.disease}}{{user.medicine}}{{user.hospital_name}}<br><br><br><br> {% endfor %} {% endcomment %}
+
+
+
+        <table>
+            <tr class="head">
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Disease</th>
+                <th>Mediceie</th>
+                <th>Hospital Name</th>
+                <!-- <th>Rent</th> -->
+            </tr>
+            {% for user in users %}
+
+            <tr class="clickable-row" href="{% url 'home'%}">
+                <td>{{user.doctor}}</td>
+                <td>{{user.date}}</td>
+                <td>{{user.disease}}</td>
+                <td>{{user.medicine}}</td>
+                <td>{{user.hospital_name}}</td>
+            </tr>
+
+            <tr>
+                {% endfor %}
+            </tr>
+        </table>
+    </div>
+    <div class="center">
+  <a class="btnSub" href="{% url 'doctor_home' %}" style="text-decoration: none">
+    Go To Home
+  </a>
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html class=''>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="https://codepen.io/blossk/pen/muhyt" />
+    <link rel="icon" href="static/assets/img/Main_LOGO.png" type="image/x-icon">
+    <link rel='stylesheet' href='https://s.codepen.io/assets/reset/normalize.css'>
+    <link rel='stylesheet' href='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css'>
+    <script src='https://s.codepen.io/assets/libs/prefixfree.min.js'></script>
+    <script src='https://s.codepen.io/assets/libs/modernizr.js'></script>
+    <link rel='stylesheet prefetch' href='https://tympanus.net/Development/AnimatedHeaderBackgrounds/css/component.css'>
+    <style class="cp-pen-styles">
+        @font-face {
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        *,
+        *:after,
+        *:before {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        .clearfix:before,
+        .clearfix:after {
+            content: '';
+            display: table;
+        }
+        
+        .clearfix:after {
+            clear: both;
+        }
+        
+        body {
+            background: #fff;
+            color: #383a3c;
+            font-weight: 400;
+            font-size: 1em;
+            line-height: 1.25;
+            font-family: 'Raleway', Calibri, Arial, sans-serif;
+        }
+        
+        a,
+        button {
+            outline: none;
+        }
+        
+        a {
+            color: #566473;
+            text-decoration: none;
+        }
+        
+        a:hover,
+        a:focus {
+            color: #34495e;
+        }
+        
+        section {
+            padding: 1em;
+            text-align: center;
+        }
+        
+        p.ref {
+            text-align: center;
+            padding: 2em 1em;
+        }
+        /* Header */
+        
+        .codrops-header {
+            margin: 0 auto;
+            padding: 2em;
+            text-align: center;
+            max-width: 900px;
+        }
+        
+        .codrops-header h1 {
+            margin: 0;
+            font-size: 4.5em;
+            line-height: 1;
+            font-weight: 200;
+        }
+        
+        .codrops-header h1 span {
+            display: block;
+            padding: 1em 0 1.5em;
+            font-size: 36%;
+            color: #95a5a6;
+            line-height: 1.4;
+        }
+        /* To Navigation Style */
+        
+        .codrops-top {
+            width: 100%;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 0.69em;
+            text-align: center;
+            padding: 3em 0;
+        }
+        
+        .codrops-top a {
+            display: inline-block;
+            padding: 1.5em;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        
+        .codrops-icon:before {
+            margin: 0 4px;
+            text-transform: none;
+            font-weight: normal;
+            font-style: normal;
+            font-variant: normal;
+            font-family: 'codropsicons';
+            line-height: 1;
+            speak: none;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .codrops-icon-drop:before {
+            content: "\e001";
+        }
+        
+        .codrops-icon-prev:before {
+            content: "\e004";
+        }
+        /* Demo Buttons Style */
+        
+        .codrops-demos {
+            padding-top: 1em;
+            font-size: 0.8em;
+        }
+        
+        .codrops-demos a {
+            display: inline-block;
+            margin: 0.35em 0.1em;
+            padding: 0.5em 1.2em;
+            outline: none;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            border-radius: 2px;
+            font-size: 110%;
+            border: 2px solid transparent;
+        }
+        
+        .codrops-demos a:hover,
+        .codrops-demos a.current-demo {
+            border-color: #383a3c;
+        }
+        
+        .codrops-demos h3 {
+            margin: 0;
+            padding: 1em 0 0.5em 0;
+            font-size: 0.9em;
+            float: left;
+            min-width: 90px;
+            clear: left;
+        }
+        
+        .codrops-demos div:not(:first-child) h3 {
+            padding-top: 2em;
+        }
+        
+        .codrops-demos a:hover,
+        .codrops-demos a.current-demo {
+            color: inherit;
+            border-color: initial;
+        }
+        /* Related demos */
+        
+        .related {
+            padding: 10em 0;
+        }
+        
+        .related p {
+            font-size: 1.5em;
+        }
+        
+        .related>a {
+            display: inline-block;
+            text-align: center;
+            margin: 20px 10px;
+            padding: 25px;
+            vertical-align: middle;
+        }
+        
+        .related a img {
+            max-width: 100%;
+            opacity: 0.8;
+            border-radius: 10px;
+        }
+        
+        .related a:hover img,
+        .related a:active img {
+            opacity: 1;
+        }
+        
+        .related a h3 {
+            margin: 0;
+            min-height: 63px;
+            padding: 0.5em 0 0.3em;
+            max-width: 300px;
+            text-align: center;
+            font-weight: 400;
+            font-size: 1em;
+        }
+        
+        @media screen and (min-width: 800px) {
+            body #cdawrap {
+                width: 180px;
+                right: 25px;
+                top: 100%;
+                position: absolute;
+                margin-top: 25px;
+            }
+        }
+        
+        @media screen and (max-width: 40em) {
+            .codrops-header h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <html lang="en" class="no-js">
+
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>bg</title>
+
+        <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+        <!--[if IE]>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    </head>
+
+    <body>
+        <div class="container demo-1">
+            <div class="content">
+                <div id="large-header" class="large-header">
+                    <canvas id="demo-canvas"></canvas>
+                </div>
+                <div class="codrops-top clearfix">
+
+                </div>
+
+            </div>
+
+    </body>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+    <script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js'></script>
+    <script src='/assets/libs/traceur-runtime.js'></script>
+    <script src='https://tympanus.net/Development/AnimatedHeaderBackgrounds/js/TweenLite.min.js'></script>
+    <script src='https://tympanus.net/Development/AnimatedHeaderBackgrounds/js/EasePack.min.js'></script>
+    <script>
+        'use strict';
+        (function() {
+            var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
+            initHeader();
+            initAnimation();
+            addListeners();
+
+            function initHeader() {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                target = {
+                    x: width / 2,
+                    y: height / 2
+                };
+                largeHeader = document.getElementById('large-header');
+                largeHeader.style.height = height + 'px';
+                canvas = document.getElementById('demo-canvas');
+                canvas.width = width;
+                canvas.height = height;
+                ctx = canvas.getContext('2d');
+                points = [];
+                for (var x = 0; x < width; x = x + width / 20) {
+                    for (var y = 0; y < height; y = y + height / 20) {
+                        var px = x + Math.random() * width / 20;
+                        var py = y + Math.random() * height / 20;
+                        var p = {
+                            x: px,
+                            originX: px,
+                            y: py,
+                            originY: py
+                        };
+                        points.push(p);
+                    }
+                }
+                for (var i = 0; i < points.length; i++) {
+                    var closest = [];
+                    var p1 = points[i];
+                    for (var j = 0; j < points.length; j++) {
+                        var p2 = points[j];
+                        if (!(p1 == p2)) {
+                            var placed = false;
+                            for (var k = 0; k < 5; k++) {
+                                if (!placed) {
+                                    if (closest[k] == undefined) {
+                                        closest[k] = p2;
+                                        placed = true;
+                                    }
+                                }
+                            }
+                            for (var k = 0; k < 5; k++) {
+                                if (!placed) {
+                                    if (getDistance(p1, p2) < getDistance(p1, closest[k])) {
+                                        closest[k] = p2;
+                                        placed = true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    p1.closest = closest;
+                }
+                for (var i in points) {
+                    var c = new Circle(points[i], 2 + Math.random() * 2, 'rgba(255,255,255,0.3)');
+                    points[i].circle = c;
+                }
+            }
+
+            function addListeners() {
+                if (!('ontouchstart' in window)) {
+                    window.addEventListener('mousemove', mouseMove);
+                }
+                window.addEventListener('scroll', scrollCheck);
+                window.addEventListener('resize', resize);
+            }
+
+            function mouseMove(e) {
+                var posx = posy = 0;
+                if (e.pageX || e.pageY) {
+                    posx = e.pageX;
+                    posy = e.pageY;
+                } else if (e.clientX || e.clientY) {
+                    posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+                    posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+                }
+                target.x = posx;
+                target.y = posy;
+            }
+
+            function scrollCheck() {
+                if (document.body.scrollTop > height)
+                    animateHeader = false;
+                else
+                    animateHeader = true;
+            }
+
+            function resize() {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                largeHeader.style.height = height + 'px';
+                canvas.width = width;
+                canvas.height = height;
+            }
+
+            function initAnimation() {
+                animate();
+                for (var i in points) {
+                    shiftPoint(points[i]);
+                }
+            }
+
+            function animate() {
+                if (animateHeader) {
+                    ctx.clearRect(0, 0, width, height);
+                    for (var i in points) {
+                        if (Math.abs(getDistance(target, points[i])) < 4000) {
+                            points[i].active = 0.3;
+                            points[i].circle.active = 0.6;
+                        } else if (Math.abs(getDistance(target, points[i])) < 20000) {
+                            points[i].active = 0.1;
+                            points[i].circle.active = 0.3;
+                        } else if (Math.abs(getDistance(target, points[i])) < 40000) {
+                            points[i].active = 0.02;
+                            points[i].circle.active = 0.1;
+                        } else {
+                            points[i].active = 0;
+                            points[i].circle.active = 0;
+                        }
+                        drawLines(points[i]);
+                        points[i].circle.draw();
+                    }
+                }
+                requestAnimationFrame(animate);
+            }
+
+            function shiftPoint(p) {
+                TweenLite.to(p, 1 + 1 * Math.random(), {
+                    x: p.originX - 50 + Math.random() * 100,
+                    y: p.originY - 50 + Math.random() * 100,
+                    ease: Circ.easeInOut,
+                    onComplete: function() {
+                        shiftPoint(p);
+                    }
+                });
+            }
+
+            function drawLines(p) {
+                if (!p.active)
+                    return;
+                for (var i in p.closest) {
+                    ctx.beginPath();
+                    ctx.moveTo(p.x, p.y);
+                    ctx.lineTo(p.closest[i].x, p.closest[i].y);
+                    ctx.strokeStyle = 'rgba(156,217,249,' + p.active + ')';
+                    ctx.stroke();
+                }
+            }
+
+            function Circle(pos, rad, color) {
+                var _this = this;
+                (function() {
+                    _this.pos = pos || null;
+                    _this.radius = rad || null;
+                    _this.color = color || null;
+                }());
+                this.draw = function() {
+                    if (!_this.active)
+                        return;
+                    ctx.beginPath();
+                    ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
+                    ctx.fillStyle = 'rgba(156,217,249,' + _this.active + ')';
+                    ctx.fill();
+                };
+            }
+
+            function getDistance(p1, p2) {
+                return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
+            }
+        }()); //@ sourceURL=pen.js
+    </script>
+    <script src='https://codepen.io/assets/editor/live/css_live_reload_init.js'></script>
+</body>
+
+</html>

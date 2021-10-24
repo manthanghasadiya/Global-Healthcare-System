@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome to GHS</h1>
+
+    {% if request.user.is_authenticated %}
+
+    <a href="{% url 'test' %}">see here also</a> <br>
+    <a href="{% url 'index' %}">just see</a> <br>
+    <a href="{% url 'history' %}">History</a> <br>
+    <a href="{% url 's' %}">s</a> <br>
+    <a href="{% url 'book_appointment' %}">Book Appointment</a> <br>
+    <a href="{% url 'show_appointment' %}">User Show Appointment</a> <br>
+    <a href="{% url 'doctor_show_appointment' %}">Show Appointments (Doctor Side)</a> <br>
+
+    <a href="{% url 'user_home' %}">User Home</a> <br>
+    <a href="{% url 'doctor_home' %}">Doctor Home</a> <br>
+
+    <a href="{% url 'signout' %}">Signout</a> <br> {% else %} <a href="{% url 'signup_user' %}">Signup User</a>
+
+    <a href="{% url 'index' %}">Signup Doctor</a> <a href="{% url 'signin' %}">Signin</a> {% endif %}
+
+</body>
+
+</html>
+
+<!-- 
+
+    1 normal
+    4 team
+    2 features
+    3 contact us
+    5 
+
+    For User
+    Appointment booking
+    History
+
+    For Doctor
+    History
+    Appointment order
+
+ -->

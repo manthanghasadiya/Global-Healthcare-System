@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Doctor Registration</title>
+
+    <style>
+        #img {
+            background-image: url('../static/image/doctor.jpeg');
+        }
+        
+        #id_gender {
+            display: none;
+        }
+    </style>
+    <!-- Icons font CSS-->
+    <link rel="icon" href="static/assets/img/Main_LOGO.png" type="image/x-icon">
+    <link href="../static/vendor2/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="../static/vendor2/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="../static/vendor2/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="../static/vendor2/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="../static/css/tutt.css" rel="stylesheet" media="all">
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            background-image: url('../static/image/doctor.jpeg');
+        }
+        
+        .bubbles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+        }
+        
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            width: 40px;
+            height: 40px;
+            background: #f1f1f1;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: rise 10s infinite ease-in;
+        }
+        
+        .bubble:nth-child(1) {
+            width: 40px;
+            height: 40px;
+            left: 10%;
+            animation-duration: 8s;
+        }
+        
+        .bubble:nth-child(2) {
+            width: 20px;
+            height: 20px;
+            left: 20%;
+            animation-duration: 5s;
+            animation-delay: 1s;
+        }
+        
+        .bubble:nth-child(3) {
+            width: 50px;
+            height: 50px;
+            left: 35%;
+            animation-duration: 7s;
+            animation-delay: 2s;
+        }
+        
+        .bubble:nth-child(4) {
+            width: 80px;
+            height: 80px;
+            left: 50%;
+            animation-duration: 11s;
+            animation-delay: 0s;
+        }
+        
+        .bubble:nth-child(5) {
+            width: 35px;
+            height: 35px;
+            left: 55%;
+            animation-duration: 6s;
+            animation-delay: 1s;
+        }
+        
+        .bubble:nth-child(6) {
+            width: 45px;
+            height: 45px;
+            left: 65%;
+            animation-duration: 8s;
+            animation-delay: 3s;
+        }
+        
+        .bubble:nth-child(7) {
+            width: 90px;
+            height: 90px;
+            left: 70%;
+            animation-duration: 12s;
+            animation-delay: 2s;
+        }
+        
+        .bubble:nth-child(8) {
+            width: 25px;
+            height: 25px;
+            left: 80%;
+            animation-duration: 6s;
+            animation-delay: 2s;
+        }
+        
+        .bubble:nth-child(9) {
+            width: 15px;
+            height: 15px;
+            left: 70%;
+            animation-duration: 5s;
+            animation-delay: 1s;
+        }
+        
+        .bubble:nth-child(10) {
+            width: 90px;
+            height: 90px;
+            left: 25%;
+            animation-duration: 10s;
+            animation-delay: 4s;
+        }
+        
+        @keyframes rise {
+            0% {
+                bottom: -100px;
+                transform: translateX(0);
+            }
+            50% {
+                transform: translate(100px);
+            }
+            100% {
+                bottom: 1080px;
+                transform: translateX(-200px);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="sticky">
+        <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+
+        </div>
+    </section>
+
+    {{user_form.errors}} {{user_info_form.errors}}
+    <div id="img">
+        <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+            <div class="wrapper wrapper--w680">
+                <div class="card card-4">
+                    <div class="card-body">
+                        <h2 class="title">Doctor Registration</h2>
+                        <form action="" method="POST" enctype="multipart/form-data">
+
+                            {% csrf_token %}
+
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">first name</label>
+                                        <input class="input--style-4" type="text" required name="first_name">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">last name</label>
+                                        <input class="input--style-4" type="text" required name="last_name">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Date of birth</label>
+                                        <div class="input-group-icon">
+                                            <input class="input--style-4 js-datepicker" type="text" name="dob" maxlength="10" required id="id_dob">
+                                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Gender</label>
+                                        <div class="p-t-10">
+                                            <label class="radio-container m-r-45">Male
+                                            <input type="radio" name="gender" id="male">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                            <label class="radio-container">Female
+                                            <input type="radio" name="gender" id='female'>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Email</label>
+                                        <input class="input--style-4" type="email" name="email" maxlength="254" id="id_email">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Phone Number</label>
+                                        <input class="input--style-4" type="text" name="mobile_number" maxlength="12" required id="id_mobile_number">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group ">
+                                <div class="input-group">
+                                    <label class="label">Profile pic</label>
+                                    <input class="input--style-4" type="file" name="profile_pic" accept="image/*" required id="id_profile_pic">
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label class="label" for="id_degree_type">Degree Type</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <p>
+                                        <input type="text" name="degree_type" list="position_list" id="id_degree_type" />
+                                    </p>
+                                    <datalist id="position_list">
+                                    <option value="" selected>---------</option>
+                                    <option value="MBBS">Bachelor of Medicine, Bachelor of Surgery(MBBS)</option>
+                                    <option value="BDS">Bachelor of Dental Surgery(BDS)</option>
+                                    <option value="BAMS">Bachelor of Ayurvedic Medicine and Surgery(BAMS)</option>
+                                    <option value="BUMS">Bachelor of Unani Medicine and Surgery(BUMS)</option>
+                                    <option value="BHMS">Bachelor of Homeopathy Medicine and Surgery(BHMS)</option>
+                                    <option value="BYNS">Bachelor of Yoga and Naturopathy Sciences(BYNS)</option>
+                                    <option value="B.V.Sc &amp; AH">Bachelor of Veterinary Sciences and Animal Husbandry(BVSc&amp;AH)</option>
+                                    <option value="MD">Doctor of Medicine(MD)</option>
+                                    <option value="MS">Master of Surgery(MS)</option>
+                                    <option value="DM">Doctorate of Medicine(DM)</option>
+                                  </datalist>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label class="label" for="id_specialities_type">Specialities type</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <p>
+                                        <input type="text" name="specialities_type" list="sp_position_list" id="id_specialities_type" />
+                                    </p>
+                                    <datalist id="sp_position_list">
+                                    <option value="" selected>---------</option>
+                                    <option value="ENT">Ear, Nose and Throat</option>
+                                    <option value="GS">General Surgery</option>
+                                    <option value="OP">Ophthalmology</option>
+                                    <option value="OR">Orthopaedics</option>
+                                    <option value="OAG">Obstetrics and Gynaecology</option>
+                                    <option value="DVL">Dermatology, Venerology and Leprosy</option>
+                                    <option value="AST">Anaesthesiology</option>
+                                    <option value="PSY">Psychiatry</option>
+                                    <option value="PTH">Pathology</option>
+                                    <option value="SVD">Skin and Venereal diseases</option>
+                                    <option value="PHRM">Pharmacology</option>
+                                    <option value="PMR">Physical Medicine and Rehabilitation</option>
+                                    <option value="PHY">Physiology</option>
+                                    <option value="CRD">Cardiology</option>
+                                    <option value="PDT">Paediatrics</option>
+                                  </datalist>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="input-group">
+                                    <label class="label">Hospital Name</label>
+                                    <input class="input--style-4" type="text" name="hospital_name" id="hospital_name">
+                                </div>
+
+                            </div>
+
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Username</label>
+                                        <input class="input--style-4" type="text" name="username" maxlength="150" required id="id_username">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Password</label>
+                                        <input class="input--style-4" type="password" name="password" minlength="8" required id="id_password">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row row-space">
+                                <div class="col-2" style="padding-left: 40px;">
+                                    <div class="input-group">
+                                        <button class="btn btn--radius-2 btn--blue" type="reset">Reset</button>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <button class="btn btn--radius-2 btn--blue" onclick="funother()" type="submit" style="margin-left: 40px;">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <select name="gender" required id="id_gender">
+                                <option value="" selected>---------</option>
+
+                                <option value="M">Male</option>
+
+                                <option value="F">Female</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function funother() {
+                if (document.getElementById('male').checked) {
+                    document.getElementById(
+                        "id_gender").selectedIndex = "1";
+                } else {
+                    document.getElementById("id_gender").selectedIndex = "2";
+                }
+            }
+        </script>
+
+        <!-- Jquery JS-->
+        <script src="../static/vendor2/jquery/jquery.min.js"></script>
+        <!-- Vendor JS-->
+        <script src="../static/vendor2/select2/select2.min.js"></script>
+        <script src="../static/vendor2/datepicker/moment.min.js"></script>
+        <script src="../static/vendor2/datepicker/daterangepicker.js"></script>
+
+        <!-- Main JS-->
+        <script src="../static/js/ttt.js"></script>
+    </div>
+</body>
+<!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

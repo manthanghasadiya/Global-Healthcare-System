@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Feedback</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" href="static/assets/img/Main_LOGO.png" type="image/x-icon">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../static/assets5/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../static/assets5/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../static/assets5/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../static/assets5/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../static/assets5/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../static/assets5/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../static/assets5/css/util.css">
+    <link rel="stylesheet" type="text/css" href="../static/assets5/css/main.css">
+    <!--===============================================================================================-->
+
+    <!-- Favicons -->
+    <link rel="icon" href="static/assets/img/Main_LOGO.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="static/assets3/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="static/assets3/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/assets3/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="static/assets3/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="static/assets3/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="static/assets3/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="static/assets3/css/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+
+
+    <style>
+        .sticky {
+            margin-top: 0;
+            padding: 0;
+        }
+        
+        .bubbles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+        }
+        
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            width: 40px;
+            height: 40px;
+            background: #f1f1f1;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: rise 10s infinite ease-in;
+        }
+        
+        .bubble:nth-child(1) {
+            width: 40px;
+            height: 40px;
+            left: 10%;
+            animation-duration: 8s;
+        }
+        
+        .bubble:nth-child(2) {
+            width: 20px;
+            height: 20px;
+            left: 20%;
+            animation-duration: 5s;
+            animation-delay: 1s;
+        }
+        
+        .bubble:nth-child(3) {
+            width: 50px;
+            height: 50px;
+            left: 35%;
+            animation-duration: 7s;
+            animation-delay: 2s;
+        }
+        
+        .bubble:nth-child(4) {
+            width: 80px;
+            height: 80px;
+            left: 50%;
+            animation-duration: 11s;
+            animation-delay: 0s;
+        }
+        
+        .bubble:nth-child(5) {
+            width: 35px;
+            height: 35px;
+            left: 55%;
+            animation-duration: 6s;
+            animation-delay: 1s;
+        }
+        
+        .bubble:nth-child(6) {
+            width: 45px;
+            height: 45px;
+            left: 65%;
+            animation-duration: 8s;
+            animation-delay: 3s;
+        }
+        
+        .bubble:nth-child(7) {
+            width: 90px;
+            height: 90px;
+            left: 70%;
+            animation-duration: 12s;
+            animation-delay: 2s;
+        }
+        
+        .bubble:nth-child(8) {
+            width: 25px;
+            height: 25px;
+            left: 80%;
+            animation-duration: 6s;
+            animation-delay: 2s;
+        }
+        
+        .bubble:nth-child(9) {
+            width: 15px;
+            height: 15px;
+            left: 70%;
+            animation-duration: 5s;
+            animation-delay: 1s;
+        }
+        
+        .bubble:nth-child(10) {
+            width: 90px;
+            height: 90px;
+            left: 25%;
+            animation-duration: 10s;
+            animation-delay: 4s;
+        }
+        
+        @keyframes rise {
+            0% {
+                bottom: -100px;
+                transform: translateX(0);
+            }
+            50% {
+                transform: translate(100px);
+            }
+            100% {
+                bottom: 1080px;
+                transform: translateX(-200px);
+            }
+        }
+        /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+        
+        #header {
+            background: rgba(0, 0, 0, 0.75);
+            transition: all 0.5s;
+            z-index: 997;
+            height: 80px;
+        }
+        
+        #header .logo {
+            font-size: 28px;
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        #header .logo a {
+            color: #fff;
+        }
+        
+        #header .logo img {
+            max-height: 40px;
+        }
+        /*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+        /**
+* Desktop Navigation 
+*/
+        
+        .navbar {
+            padding: 0;
+        }
+        
+        .navbar ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+        
+        .navbar li {
+            position: relative;
+        }
+        
+        .navbar>ul>li {
+            white-space: nowrap;
+            padding: 10px 0 10px 22px;
+        }
+        
+        .navbar a,
+        .navbar a:focus {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 4px;
+            font-family: "Roboto", sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.7);
+            white-space: nowrap;
+            transition: 0.3s;
+            text-transform: uppercase;
+            position: relative;
+        }
+        
+        .navbar a i,
+        .navbar a:focus i {
+            font-size: 12px;
+            line-height: 0;
+            margin-left: 5px;
+        }
+        
+        .navbar>ul>li>a:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background-color: #5c9f24;
+            visibility: hidden;
+            width: 0px;
+            transition: all 0.3s ease-in-out 0s;
+        }
+        
+        .navbar a:hover:before,
+        .navbar li:hover>a:before,
+        .navbar .active:before {
+            visibility: visible;
+            width: 100%;
+        }
+        
+        .navbar a:hover,
+        .navbar .active,
+        .navbar .active:focus,
+        .navbar li:hover>a {
+            color: #fff;
+        }
+        
+        .navbar .getstarted,
+        .navbar .getstarted:focus {
+            padding: 8px 25px;
+            margin-left: 12px;
+            border-radius: 4px;
+            color: #fff;
+            font-weight: 400;
+            font-family: "Poppins", sans-serif;
+            border: 2px solid #5c9f24;
+        }
+        
+        .navbar .getstarted:hover,
+        .navbar .getstarted:focus:hover {
+            color: #fff;
+            background: #5c9f24;
+        }
+        
+        .navbar .getstarted:hover:before,
+        .navbar li:hover>.getstarted:before {
+            visibility: hidden;
+        }
+        
+        .navbar .dropdown ul {
+            display: block;
+            position: absolute;
+            left: 22px;
+            top: calc(100% + 30px);
+            margin: 0;
+            padding: 10px 0;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            background: #fff;
+            box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+            transition: 0.3s;
+        }
+        
+        .navbar .dropdown ul li {
+            min-width: 200px;
+        }
+        
+        .navbar .dropdown ul a {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: none;
+            color: #2a2a2a;
+        }
+        
+        .navbar .dropdown ul a i {
+            font-size: 12px;
+        }
+        
+        .navbar .dropdown ul a:hover,
+        .navbar .dropdown ul .active:hover,
+        .navbar .dropdown ul li:hover>a {
+            color: #5c9f24;
+        }
+        
+        .navbar .dropdown:hover>ul {
+            opacity: 1;
+            top: 100%;
+            visibility: visible;
+        }
+        
+        .navbar .dropdown .dropdown ul {
+            top: 0;
+            left: calc(100% - 30px);
+            visibility: hidden;
+        }
+        
+        .navbar .dropdown .dropdown:hover>ul {
+            opacity: 1;
+            top: 0;
+            left: 100%;
+            visibility: visible;
+        }
+        
+        @media (max-width: 1366px) {
+            .navbar .dropdown .dropdown ul {
+                left: -90%;
+            }
+            .navbar .dropdown .dropdown:hover>ul {
+                left: -100%;
+            }
+        }
+        /**
+* Mobile Navigation 
+*/
+        
+        .mobile-nav-toggle {
+            color: #fff;
+            font-size: 28px;
+            cursor: pointer;
+            display: none;
+            line-height: 0;
+            transition: 0.5s;
+        }
+        
+        .mobile-nav-toggle.bi-x {
+            color: #5c9f24;
+        }
+        
+        @media (max-width: 991px) {
+            .mobile-nav-toggle {
+                display: block;
+            }
+            .navbar ul {
+                display: none;
+            }
+        }
+        
+        .navbar-mobile {
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(17, 17, 17, 0.9);
+            transition: 0.3s;
+            z-index: 999;
+        }
+        
+        .navbar-mobile .mobile-nav-toggle {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+        
+        .navbar-mobile ul {
+            display: block;
+            position: absolute;
+            top: 55px;
+            right: 15px;
+            bottom: 15px;
+            left: 15px;
+            padding: 10px 0;
+            background-color: #fff;
+            overflow-y: auto;
+            transition: 0.3s;
+        }
+        
+        .navbar-mobile a,
+        .navbar-mobile a:focus {
+            padding: 10px 20px;
+            font-size: 15px;
+            color: #2a2a2a;
+        }
+        
+        .navbar-mobile a:hover,
+        .navbar-mobile .active,
+        .navbar-mobile li:hover>a {
+            color: #5c9f24;
+        }
+        
+        .navbar-mobile>ul>li {
+            white-space: nowrap;
+            padding: 0;
+        }
+        
+        .navbar-mobile a:hover:before,
+        .navbar-mobile li:hover>a:before,
+        .navbar-mobile .active:before {
+            visibility: hidden;
+        }
+        
+        .navbar-mobile .getstarted,
+        .navbar-mobile .getstarted:focus {
+            margin: 15px;
+            color: #5c9f24;
+            padding-left: 15px;
+        }
+        
+        .navbar-mobile .dropdown ul {
+            position: static;
+            display: none;
+            margin: 10px 20px;
+            padding: 10px 0;
+            z-index: 99;
+            opacity: 1;
+            visibility: visible;
+            background: #fff;
+            box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+        }
+        
+        .navbar-mobile .dropdown ul li {
+            min-width: 200px;
+        }
+        
+        .navbar-mobile .dropdown ul a {
+            padding: 10px 20px;
+        }
+        
+        .navbar-mobile .dropdown ul a i {
+            font-size: 12px;
+        }
+        
+        .navbar-mobile .dropdown ul a:hover,
+        .navbar-mobile .dropdown ul .active:hover,
+        .navbar-mobile .dropdown ul li:hover>a {
+            color: #5c9f24;
+        }
+        
+        .navbar-mobile .dropdown>.dropdown-active {
+            display: block;
+        }
+        /*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+        
+        #hero {
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(17, 17, 17, 0.8);
+            overflow: hidden;
+            padding: 0;
+        }
+        
+        #hero .carousel-item {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            transition: 0.3;
+        }
+        
+        #hero .carousel-item::before {
+            content: "";
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+        
+        #hero .carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        #hero .carousel-content {
+            text-align: center;
+        }
+        
+        #hero h2 {
+            color: #fff;
+            margin-bottom: 30px;
+            font-size: 48px;
+            font-weight: 700;
+        }
+        
+        #hero h2 span {
+            color: #5c9f24;
+        }
+        
+        #hero p {
+            width: 80%;
+            -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+            margin: 0 auto 30px auto;
+            color: #fff;
+        }
+        
+        #hero .carousel-inner .carousel-item {
+            transition-property: opacity;
+            background-position: center top;
+        }
+        
+        #hero .carousel-inner .carousel-item,
+        #hero .carousel-inner .active.carousel-item-start,
+        #hero .carousel-inner .active.carousel-item-end {
+            opacity: 0;
+        }
+        
+        #hero .carousel-inner .active,
+        #hero .carousel-inner .carousel-item-next.carousel-item-start,
+        #hero .carousel-inner .carousel-item-prev.carousel-item-end {
+            opacity: 1;
+            transition: 0.5s;
+        }
+        
+        #hero .carousel-inner .carousel-item-next,
+        #hero .carousel-inner .carousel-item-prev,
+        #hero .carousel-inner .active.carousel-item-start,
+        #hero .carousel-inner .active.carousel-item-end {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+        
+        #hero .carousel-control-next-icon,
+        #hero .carousel-control-prev-icon {
+            background: none;
+            font-size: 30px;
+            line-height: 0;
+            width: auto;
+            height: auto;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            transition: 0.3s;
+            color: rgba(255, 255, 255, 0.5);
+            width: 54px;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #hero .carousel-control-next-icon:hover,
+        #hero .carousel-control-prev-icon:hover {
+            background: rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        #hero .carousel-indicators li {
+            cursor: pointer;
+            background: #fff;
+            overflow: hidden;
+            border: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50px;
+            opacity: 0.6;
+            transition: 0.3s;
+        }
+        
+        #hero .carousel-indicators li.active {
+            opacity: 1;
+            background: #5c9f24;
+        }
+        
+        #hero .btn-get-started {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 10px 32px 12px 32px;
+            border-radius: 4px;
+            transition: 0.5s;
+            line-height: 1;
+            margin: 10px;
+            color: #fff;
+            -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+            text-transform: uppercase;
+            border: 2px solid #5c9f24;
+            background: #5c9f24;
+        }
+        
+        #hero .btn-get-started:hover {
+            background: #6ab82a;
+            border-color: #6ab82a;
+            color: #fff;
+        }
+        
+        @media (max-width: 768px) {
+            #hero h2 {
+                font-size: 28px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            #hero p {
+                width: 60%;
+            }
+            #hero .carousel-control-prev,
+            #hero .carousel-control-next {
+                width: 5%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo"><a href="{% url 'user_home' %}">GHS</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo"><img src="static/assets3/img/logo.png" alt="" class="img-fluid"></a>-->
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="{% url 'user_home' %}">Dashboard</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'book_appointment' %}">Book Appointment</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'show_appointment' %}">Show Appointment</a></li>
+                    <li><a class="nav-link scrollto " href="{% url 'history' %}">History</a></li>
+                    <li><a class="nav-link scrollto active" href="{% url 'feedback' %}">Feedback</a></li>
+                    <li><a class="getstarted scrollto" href="{% url 'signout' %}">Signout</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+
+        </div>
+    </header>
+    <section class="sticky">
+        <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+
+        </div>
+    </section>
+
+    <div class="container-contact100" style="background-image: url('../static/assets5/images/bg-01.jpg'); ">
+        <div class="wrap-contact100" style="margin-top:100px">
+            <form class="contact100-form validate-form" method="POST">
+                {% csrf_token %}
+                <span class="contact100-form-title">
+					Feedback Matters for us!
+				</span>
+
+
+                <div class="input-group">
+
+                    <div class="rs-select2 js-select-simple select--no-search">
+
+                        <datalist id="position_list">
+			{% for doctor in doctors %}
+			<option value="{{doctor.doctor.id}}">{{doctor}}</option>
+			{% endfor %}
+		</datalist>
+                        <div class="select-dropdown"></div>
+                    </div>
+                </div>
+
+
+                <div class="wrap-input100 validate-input" data-validate="Name is required">
+                    <span class="label-input100">Doctor Name</span>
+                    <input class="input100" name="doctor" list="position_list" value="{{doctor.doctor.id}}" id="id_degree_type" type="text" placeholder="Select Doctor Name">
+
+                </div>
+
+                <div class="wrap-input100 validate-input" data-validate="Answer is required">
+                    <label>Waiting Time (Did you wait for more than 15 minutes?)</label>
+                    <div class="p-t-10">
+                        <label class="radio-container m-r-45">Yes
+						<input type="radio" name="waiting_time" value="Yes" id="male" required>
+						<span class="checkmark"></span>
+					</label>
+                        <label class="radio-container">No
+						<input type="radio" name="waiting_time" value="No" id='female'>
+						<span class="checkmark"></span>
+					</label>
+                    </div>
+                </div>
+
+                <div class="wrap-input100">
+                    <label class="label">Recommandation (Will you recommend us to your friends and family?)</label>
+                    <div class="p-t-10">
+                        <label class="radio-container m-r-45">Yes
+						<input type="radio" name="recommendation" value="Yes" id="male" required>
+						<span class="checkmark"></span>
+					</label>
+                        <label class="radio-container">No
+						<input type="radio" name="recommendation"value="No" id='female'>
+						<span class="checkmark"></span>
+					</label>
+                    </div>
+                </div>
+
+                <div class="wrap-input100">
+                    <span class="label-input100">Feedback</span>
+                    <textarea class="input100" name="feedback" placeholder="Your message here..."></textarea>
+                </div>
+
+                <div class="container-contact100-form-btn">
+                    <div class="wrap-contact100-form-btn">
+                        <div class="contact100-form-bgbtn"></div>
+                        <button class="contact100-form-btn" type='submit'>
+							Submit
+						</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <span class="contact100-more">
+			There is no failure. Only feedback.
+		</span>
+    </div>
+
+
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script src="../static/assets5/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="../static/assets5/vendor/bootstrap/js/popper.js"></script>
+    <script src="../static/assets5/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="../static/assets5/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="../static/assets5/js/main.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+
+    <footer id="footer ">
+    </footer>
+    <!-- End Footer -->
+
+    <a href="# " class="back-to-top d-flex align-items-center justify-content-center "><i
+            class="bi bi-arrow-up-short "></i></a>
+    <div id="preloader "></div>
+
+    <!-- Vendor JS Files -->
+    <script src="static/assets2/vendor/aos/aos.js "></script>
+    <script src="static/assets2/vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="static/assets2/vendor/glightbox/js/glightbox.min.js "></script>
+    <script src="static/assets2/vendor/isotope-layout/isotope.pkgd.min.js "></script>
+    <script src="static/assets2/vendor/php-email-form/validate.js "></script>
+    <script src="static/assets2/vendor/swiper/swiper-bundle.min.js "></script>
+
+    <!-- Template Main JS File -->
+    <script src="static/assets2/js/main.js "></script>
+
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <h3>GHS</h3>
+                            <p>
+                                Gujarat <br> INDIA<br><br>
+                                <strong>Phone:</strong> +91 98765 43210<br>
+                                <strong>Email:</strong> ghs@gmail.com<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% comment %}
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div> {% endcomment %}
+
+                    <div class="col-lg-3 col-md-6 footer-links" style="margin-left: 120px;">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'user_home' %}">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'book_appointment' %}">Book
+                                    Appointment</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'show_appointment' %}">User
+                                    Show
+                                    Appointments</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'history' %}">History</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'feedback' %}">Feedback</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'signout' %}">Logout</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Our Newsletter</h4>
+                        <p>Subscribe to us for latest information about all new updates to our website.</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright"> Made with love by us. &copy; Copyright <strong><span>GHS</span></strong>. All Rights Reserved
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="static/assets3/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="static/assets3/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="static/assets3/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="static/assets3/vendor/php-email-form/validate.js"></script>
+    <script src="static/assets3/vendor/purecounter/purecounter.js"></script>
+    <script src="static/assets3/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="static/assets3/js/main.js"></script>
+
+</body>
+
+</html>

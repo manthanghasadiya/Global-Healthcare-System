@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/assets/img/Main_LOGO.png" type="image/x-icon">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome to GHS</h1>
+
+
+    <h1> Check Patient </h1>
+
+    User : {{appointment.user_app}} <br> Date : {{appointment.date}} <br> Time : {{appointment.time}} <br>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name='disease' placeholder="Disease" required> <br>
+        <input type="text" name="medicine" placeholder="Medicine" required> <br>
+        <input type="text" name="charges" placeholder="Charges" required> <br>
+        <input type="text" name="hospital_name" placeholder="Hospital Name"> <br>
+
+        <button type="submit">Add</button>
+
+    </form>
+
+</body>
+
+</html>
