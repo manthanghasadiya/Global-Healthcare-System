@@ -24,3 +24,6 @@ Debug Thugs
 * And also they are able to enter data on a current health issue and the patient's expenditure on that issue.
 * Users can book their appointment with any doctor and they can also search for doctor by selecting doctor’s degree and speciality.
 * Users can see their medical expenditure, for doctor’s fees and for medicines too.
+
+## Website
+[GHS](https://global-healthcare-system.herokuapp.com/)
